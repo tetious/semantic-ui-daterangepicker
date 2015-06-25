@@ -1,9 +1,9 @@
 {
-  "name": "bootstrap-daterangepicker",
+  "name": "semantic-ui-daterangepicker",
   "version": "1.3.21",
   "main": [
     "daterangepicker.js",
-    "daterangepicker-bs3.css"
+    "daterangepicker.css"
   ],
   "ignore": [
     "**/.*",
