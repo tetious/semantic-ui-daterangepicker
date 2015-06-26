@@ -316,17 +316,45 @@
 
 .daterangepicker select.monthselect {
     margin-right: 2%;
-    width: 56%;
+    width: auto;
 }
 
 .daterangepicker select.yearselect {
-    width: 40%;
+    width: auto;
 }
 
-.daterangepicker select.hourselect, .daterangepicker select.minuteselect,
-.daterangepicker select.secondselect, .daterangepicker select.ampmselect {
-    width: 50px;
-    margin-bottom: 0;
+.daterangepicker select.ui.dropdown.hourselect,
+.daterangepicker select.ui.dropdown.minuteselect,
+.daterangepicker select.ui.dropdown.secondselect,
+.daterangepicker select.ui.dropdown.ampmselect {
+    padding: 3px;
+    height: 2em;
+}
+
+
+.daterangepicker .ui.dropdown.hourselect,
+.daterangepicker .ui.dropdown.minuteselect,
+.daterangepicker .ui.dropdown.secondselect,
+.daterangepicker .ui.dropdown.ampmselect {
+    padding: 5px;
+}
+
+.daterangepicker .ui.dropdown.yearselect > .text,
+.daterangepicker .ui.dropdown.monthselect > .text,
+.daterangepicker .ui.dropdown.hourselect > .text,
+.daterangepicker .ui.dropdown.minuteselect > .text,
+.daterangepicker .ui.dropdown.secondselect > .text,
+.daterangepicker .ui.dropdown.ampmselect > .text {
+    margin-right: 1.25em;
+}
+
+.daterangepicker .ui.dropdown.yearselect > .dropdown.icon,
+.daterangepicker .ui.dropdown.monthselect > .dropdown.icon,
+.daterangepicker .ui.dropdown.hourselect > .dropdown.icon,
+.daterangepicker .ui.dropdown.minuteselect > .dropdown.icon,
+.daterangepicker .ui.dropdown.secondselect > .dropdown.icon,
+.daterangepicker .ui.dropdown.ampmselect > .dropdown.icon {
+    padding: .8em .15em .8em .8em;
 }
 
 .daterangepicker_start_input {
@@ -340,4 +368,8 @@
 
 .daterangepicker th.month {
     width: auto;
+    padding: 0;
 }
+
+.daterangepicker .prev .left.arrow.icon,
+.daterangepicker .next .right.arrow.icon { margin: 0; }
