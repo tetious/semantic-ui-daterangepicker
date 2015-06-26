@@ -307,7 +307,7 @@
             }
 
             // update day names order to firstDay
-            if(this.locale.firstDay != 0) {
+            if(this.locale.firstDay !== 0) {
                 var iterator = this.locale.firstDay;
                 while(iterator > 0) {
                     this.locale.daysOfWeek.push(this.locale.daysOfWeek.shift());
@@ -348,7 +348,7 @@
                 if(typeof options.timeZone === 'string' && typeof moment
                     .tz !== 'undefined') {
                     this.timeZone = moment.tz.zone(options.timeZone).parse(
-                        new Date) * -1; // Offset is positive if the timezone is behind UTC and negative if it is ahead.
+                        new Date()) * -1; // Offset is positive if the timezone is behind UTC and negative if it is ahead.
                 } else {
                     this.timeZone = options.timeZone;
                 }
@@ -1403,18 +1403,18 @@
                 html += '</select> ';
 
                 if(this.timePickerSeconds) {
-                    html += ': <select class="secondselect">';
+                    html += ': <select class="ui compact upward selection dropdown secondselect">';
 
                     for(i = 0; i < 60; i += this.timePickerIncrement) {
-                        var num = i;
-                        if(num < 10)
-                            num = '0' + num;
+                        var numbr = i;
+                        if(numbr < 10)
+                            numbr = '0' + numbr;
                         if(i == selected.second()) {
                             html += '<option value="' + i +
-                                '" selected="selected">' + num +
+                                '" selected="selected">' + numbr +
                                 '</option>';
                         } else {
-                            html += '<option value="' + i + '">' + num +
+                            html += '<option value="' + i + '">' + numbr +
                                 '</option>';
                         }
                     }
