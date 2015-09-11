@@ -4,8 +4,9 @@
 
 This date range picker component for Semantic UI creates a dropdown menu from
 which a user can select a range of dates. This is a port of the original project
-created for [Improvely](http://www.improvely.com), which needed a way to select
-date ranges for reports.
+created by [Dan Grossman](http://www.dangrossman.info/) for
+[Improvely](http://www.improvely.com), which needed a way to select date ranges
+for reports.
 
 If invoked with no options, it will present two calendars to choose a start
 and end date from. Optionally, you can provide a list of date ranges the user
@@ -214,7 +215,7 @@ included in this repository for convenience. It is available under the
 
 The MIT License (MIT)
 
-Copyright (c) 2012-2014 Dan Grossman
+Copyright (c) 2012-2015 Dan Grossman
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
