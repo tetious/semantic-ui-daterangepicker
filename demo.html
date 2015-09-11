@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>A date range picker for Bootstrap</title>
+    <link href="https://rawgit.com/Semantic-Org/Semantic-UI/master/dist/semantic.min.css"
+        rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" media="all"
+        href="daterangepicker.css" />
+    <style type="text/css">
+        #config-text {
+            height: 300px;
+            width: 100%;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body style="margin: 60px 0">
+    <div class="ui container">
+        <h1 class="ui header">Configuration Builder</h1>
+        <div class="ui raised configurator segment">
+            <form class="ui stackable grid form">
+                <div class="three column row">
+                    <div class="column">
+                        <div class="field">
+                            <label for="parentEl">parentEl</label>
+                            <input type="text" id="parentEl"
+                                value="" placeholder="body">
+                        </div>
+                        <div class="field">
+                            <label for="startDate">startDate</label>
+                            <input type="text" id="startDate"
+                                value="07/01/2015">
+                        </div>
+                        <div class="field">
+                            <label for="endDate">endDate</label>
+                            <input type="text" id="endDate"
+                                value="07/15/2015">
+                        </div>
+                        <div class="field">
+                            <label for="minDate">minDate</label>
+                            <input type="text" id="minDate" value=""
+                                placeholder="MM/DD/YYYY">
+                        </div>
+                        <div class="field">
+                            <label for="maxDate">maxDate</label>
+                            <input type="text" id="maxDate" value=""
+                                placeholder="MM/DD/YYYY">
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="field">
+                            <div class="ui checkbox">
+                                <input type="checkbox"
+                                    tabindex="0" class="hidden"
+                                    id="autoApply">
+                                <label>autoApply</label>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <div class="ui checkbox">
+                                <input type="checkbox"
+                                    tabindex="0" class="hidden"
+                                    id="singleDatePicker">
+                                <label>singleDatePicker</label>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <div class="ui checkbox">
+                                <input type="checkbox"
+                                    tabindex="0" class="hidden"
+                                    id="showDropdowns">
+                                <label>showDropdowns</label>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <div class="ui checkbox">
+                                <input type="checkbox"
+                                    tabindex="0" class="hidden"
+                                    id="showWeekNumbers">
+                                <label>showWeekNumbers</label>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <div class="ui checkbox">
+                                <input type="checkbox"
+                                    tabindex="0" class="hidden"
+                                    id="timePicker">
+                                <label>timePicker</label>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <div class="ui checkbox">
+                                <input type="checkbox"
+                                    tabindex="0" class="hidden"
+                                    id="timePicker24Hour">
+                                <label>timePicker24Hour</label>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label for="timePickerIncrement">
+                                timePickerIncrement (in minutes)
+                            </label>
+                            <input type="text"
+                                id="timePickerIncrement" value="1">
+                        </div>
+                        <div class="field">
+                            <div class="ui checkbox">
+                                <input type="checkbox"
+                                    tabindex="0" class="hidden"
+                                    id="timePickerSeconds">
+                                <label>timePickerSeconds</label>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <div class="ui checkbox">
+                                <input type="checkbox"
+                                    tabindex="0" class="hidden"
+                                    id="dateLimit">
+                                <label>
+                                    dateLimit (with example date
+                                    range span)
+                                </label>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <div class="ui checkbox">
+                                <input type="checkbox"
+                                    tabindex="0" class="hidden"
+                                    id="ranges">
+                                <label>
+                                    ranges (with example
+                                    predefined ranges)
+                                </label>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <div class="ui checkbox">
+                                <input type="checkbox"
+                                    tabindex="0" class="hidden"
+                                    id="locale">
+                                <label>
+                                    locale (with example
+                                    settings)
+                                </label>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <div class="ui checkbox">
+                                <input type="checkbox"
+                                    tabindex="0" class="hidden"
+                                    id="linkedCalendars"
+                                    checked="checked">
+                                <label>linkedCalendars</label>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <div class="ui checkbox">
+                                <input type="checkbox"
+                                    tabindex="0" class="hidden"
+                                    id="autoUpdateInput"
+                                    checked="checked">
+                                <label>autoUpdateInput</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="field">
+                            <label for="opens">opens</label>
+                            <select id="opens">
+                                <option value="right" selected>
+                                    right
+                                </option>
+                                <option value="left">left</option>
+                                <option value="center">
+                                    center
+                                </option>
+                            </select>
+                        </div>
+                        <div class="field">
+                            <label for="drops">drops</label>
+                            <select id="drops">
+                                <option value="down" selected>
+                                    down
+                                </option>
+                                <option value="up">up</option>
+                            </select>
+                        </div>
+                        <div class="field">
+                            <label for="buttonClasses">
+                                buttonClasses
+                            </label>
+                            <input type="text" id="buttonClasses"
+                                value="ui small compact button">
+                        </div>
+                        <div class="field">
+                            <label for="applyClass">
+                                applyClass
+                            </label>
+                            <input type="text" id="applyClass"
+                                value="primary">
+                        </div>
+                        <div class="field">
+                            <label for="cancelClass">
+                                cancelClass
+                            </label>
+                            <input type="text" id="cancelClass"
+                                value="secondary">
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <br>
+        <div class="ui stackable grid">
+            <div class="two column row">
+                <div class="column demo">
+                    <div class="ui stackable grid">
+                        <div class="five wide tablet eight wide computer column"
+                            style="padding:0"></div>
+                        <div class="eleven wide tablet eight wide computer column">
+                            <h3 class="ui header">
+                                Your Date Range Picker
+                            </h3>
+                            <div class="ui fluid icon input">
+                                <input type="text"
+                                    id="config-demo">
+                                <i class="calendar icon"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="column">
+                    <h3 class="ui header">Configuration</h3>
+                    <div class="ui secondary segment">
+                        <textarea id="config-text"
+                            spellcheck="false"></textarea>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script type="text/javascript" src="https://rawgit.com/Semantic-Org/Semantic-UI/master/dist/semantic.min.js"></script>
+    <script type="text/javascript" src="moment.js"></script>
+    <script type="text/javascript" src="daterangepicker.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('.ui.checkbox').checkbox();
+            $('#config-text').keyup(function() {
+                eval($(this).val());
+            });
+            $('.configurator input, .configurator select').change(function() {
+                updateConfig();
+            });
+            $('.demo i').click(function() {
+                $(this).parent().find('input').click();
+            });
+            $('#startDate').daterangepicker({
+                singleDatePicker: true,
+                startDate: moment().subtract(6, 'days')
+            });
+            $('#endDate').daterangepicker({
+                singleDatePicker: true,
+                startDate: moment()
+            });
+            updateConfig();
+
+            function updateConfig() {
+                var options = {};
+                if ($('#singleDatePicker').is(':checked'))
+                    options.singleDatePicker = true;
+                if ($('#showDropdowns').is(':checked'))
+                    options.showDropdowns = true;
+                if ($('#showWeekNumbers').is(':checked'))
+                    options.showWeekNumbers = true;
+                if ($('#timePicker').is(':checked'))
+                    options.timePicker = true;
+                if ($('#timePicker24Hour').is(':checked'))
+                    options.timePicker24Hour = true;
+                if ($('#timePickerIncrement').val().length && $('#timePickerIncrement').val() != 1)
+                    options.timePickerIncrement = parseInt($('#timePickerIncrement').val(), 10);
+                if ($('#timePickerSeconds').is(':checked'))
+                    options.timePickerSeconds = true;
+                if ($('#autoApply').is(':checked'))
+                    options.autoApply = true;
+                if ($('#dateLimit').is(':checked'))
+                    options.dateLimit = {
+                        days: 7
+                    };
+                if ($('#ranges').is(':checked')) {
+                    options.ranges = {
+                        'Today': [moment(), moment()],
+                        'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+                        'Last 7 Days': [moment().subtract(6, 'days'), moment()],
+                        'Last 30 Days': [moment().subtract(29, 'days'), moment()],
+                        'This Month': [moment().startOf('month'), moment().endOf('month')],
+                        'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+                    };
+                }
+                if ($('#locale').is(':checked')) {
+                    options.locale = {
+                        format: 'MM/DD/YYYY',
+                        separator: ' - ',
+                        applyLabel: 'Apply',
+                        cancelLabel: 'Cancel',
+                        fromLabel: 'From',
+                        toLabel: 'To',
+                        customRangeLabel: 'Custom',
+                        daysOfWeek: ['Su', 'Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa'],
+                        monthNames: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+                        firstDay: 1
+                    };
+                }
+                if (!$('#linkedCalendars').is(':checked'))
+                    options.linkedCalendars = false;
+                if (!$('#autoUpdateInput').is(':checked'))
+                    options.autoUpdateInput = false;
+                if ($('#parentEl').val().length)
+                    options.parentEl = $('#parentEl').val();
+                if ($('#startDate').val().length)
+                    options.startDate = $('#startDate').val();
+                if ($('#endDate').val().length)
+                    options.endDate = $('#endDate').val();
+                if ($('#minDate').val().length)
+                    options.minDate = $('#minDate').val();
+                if ($('#maxDate').val().length)
+                    options.maxDate = $('#maxDate').val();
+                if ($('#opens').val().length && $('#opens').val() != 'right')
+                    options.opens = $('#opens').val();
+                if ($('#drops').val().length && $('#drops').val() != 'down')
+                    options.drops = $('#drops').val();
+                if ($('#buttonClasses').val().length && $('#buttonClasses').val() != 'small button')
+                    options.buttonClasses = $('#buttonClasses').val();
+                if ($('#applyClass').val().length && $('#applyClass').val() != 'primary')
+                    options.applyClass = $('#applyClass').val();
+                if ($('#cancelClass').val().length && $('#cancelClass').val() != 'secondary')
+                    options.cancelClass = $('#cancelClass').val();
+                $('#config-text').val("$('#demo').daterangepicker(" + JSON.stringify(options, null, '    ') +
+                    ", function(start, end, label) {\n  console.log(\"New date range selected: ' + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD') + ' (predefined range: ' + label + ')\");\n});");
+                $('#config-demo').daterangepicker(options, function(start, end, label) {
+                    console.log('New date range selected: ' + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD') + ' (predefined range: ' + label + ')');
+                });
+            }
+        });
+    </script>
+
+</body>
+
+</html>
