@@ -99,7 +99,7 @@
         //html template for the picker UI
         if (typeof options.template !== 'string')
             options.template =
-            '<div class="daterangepicker popup">' +
+            '<div class="ui daterangepicker popup">' +
                 '<div class="calendar left">' +
                     '<div class="daterangepicker_input">' +
                         '<div class="ui small left icon fluid input">' +

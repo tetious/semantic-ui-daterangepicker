@@ -17,6 +17,7 @@
   margin-top: 1px;
   border-radius: 4px;
   display: none;
+  max-width: none!important;
 }
 
 .daterangepicker.opensleft:before {
